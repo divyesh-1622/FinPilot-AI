@@ -1,0 +1,55 @@
+{
+  "info": {
+    "name": "FinPilot AI - Personal CFO API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Load Demo Financial Data",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{base_url}}/demo-data"
+      }
+    },
+    {
+      "name": "Get Financial Health Score",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{base_url}}/health-score"
+      }
+    },
+    {
+      "name": "Get Savings Forecast",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{base_url}}/forecast"
+      }
+    },
+    {
+      "name": "Get Legal Tax Optimization Tips",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{base_url}}/tax-tips"
+      }
+    },
+    {
+      "name": "Ask FinPilot AI CFO",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"message\": \"How can I legally optimize my taxes based on my PayPal expenses?\"}"
+        },
+        "url": "{{base_url}}/chat"
+      }
+    }
+  ]
+}
